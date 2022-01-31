@@ -1,0 +1,166 @@
+\documentclass[14pt]{article}
+\usepackage{extsizes}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{commath}
+\onehalfspacing
+\geometry{margin=0.5in}
+\author{Dylan Garza}
+\date
+\maketitle
+\begin{document}
+\begin{titlepage}
+\vspace*{\stretch{1.0}}
+   \begin{center}
+      \Large\textbf{Mass and Energy Analysis of Control Volumes (First Law of Thermodynamics), The Second Law of Thermodynamics, and Entropy }\\
+      \large\textit{IMPORTANT NOTES AND EQUATIONS}
+   \end{center}
+   \vspace*{\stretch{2}}
+\end{titlepage}
+\section{Second Law of Thermodynamics}
+\subsection{Thermal Efficiency}
+\begin{equation}
+\text{Thermal Efficiency} = \frac{\text{Net work output}}{\text{Total heat input}}
+\end{equation}
+\begin{equation}
+\eta_{th} = \frac{W_{\text{net,out}}}{Q_{\text{in}}}
+\end{equation}
+or 
+\begin{equation}
+\eta_{th} = 1 - \frac{Q_{\text{out}}}{Q_{\text{in}}}
+\end{equation}
+since\begin{equation}
+W_{\text{net,out}} = Q_{\text{in}} - Q_{\text{out}}
+\end{equation}
+$Q_H$ = magnitude of heat transfer between the cyclic device and the high temperature medium at temperature $T_H$
+\\
+$Q_L$ = Magnutde of heat transfer between the cyclic device and the lower temperature medium at temperature $T_L$
+\\
+s.t.
+\begin{equation}
+\eta_{\text{th}} = 1 - \frac{Q_{\text{L}}}{Q_{\text{H}}}
+\end{equation}
+Thermal efficiency of a heat engine is always less than unity since heat quantities are always \textbf{positive} quantities
+Devices that produce work typically have a lower thermal efficiency.
+Heat will always transfer from a High temperature medium to the lower temperature medium
+\subsection{Coefficient of Performance}
+
+Efficiency of a refrigerator is denoted as $COP_R$. The objective of a refrigerator is to remove heat ($Q_L$) from the refrigerated space. It requires a work input of $W_{\text{net,in}}$ and is expressed as: \begin{equation}
+   \text{COP}_{\text{R}} = \frac{\text{Desired input}}{\text{Required input}} = \frac{Q_{text{L}}}{W_{\text{net,in}}}
+\end{equation}
+Knowing the conservation of energy of a cyclic device:\begin{equation}
+   \text{W}_{\text{net,in}} = \text{Q}_{\text{H}} - \text{Q}_{\text{L}}
+\end{equation}
+this expression becomes\begin{equation}
+   \text{COP}_{\text{R}} = \frac{\text{Q}_{\text{L}}}{\text{Q}_{\text{H}} - \text{Q}_{\text{L}}} = \frac{1}{\frac{\text{Q}_{\text{H}}}{{\text{Q}_{\text{L}}}} - 1}
+\end{equation}
+$\text{COP}_{\text{R}}$ can be greater than 1 since the refrigerator can remove more heat than the work inputted into the system.
+\subsection{Heat Pumps}
+Heat pumps transfer from a low-temperature medium to a high temperature medium. The heat pump works by transfering energy from a low temperature medium such as cold air or cold water and transfers it to a higher temperature medium. The coefficient of performance for this sort of device is denoted as $\text{COP}_{\text{HP}}$
+\\ in this case, such is expressed as \begin{equation}
+   \text{COP}_{\text{HP}} = \dfrac{\text{Desired input}}{Required input} = \dfrac{\text{Q}_{\text{H}}}{\text{W}_{\text{net,in}}}
+\end{equation}
+and is equivilant to \begin{equation}
+   \text{COP}_{\text{HP}} = \dfrac{Q_H}{Q_H - Q_L} = \dfrac{1}{1 - \dfrac{Q_L}{Q_H}}
+\end{equation}
+and if compared to a the COP of that of a refrigerator: \begin{equation}
+   \text{COP}_{\text{HP}} = \text{COP}_{\text{R}} + 1
+\end{equation}
+
+\subsection{Carnot Heat Engine}
+the equation of any heat engine is given by \begin{equation}
+   \eta _{\text{th}} = 1 - \dfrac{Q_L}{Q_H}
+\end{equation}
+the equation fora \textbf{Carnot engine} is given by \begin{equation}
+   \eta _{\text{th,rev}} = 1 - \dfrac{T_L}{T_H}
+\end{equation}
+this is known as the \textbf{Carnot efficiency} since it is a reversible engine. this efficiency is the highest efficiency that can opperate between the two thermal energy reservoirs. for the temperatures of these problems they are taken in \textbf{ABSOLUTE TEMPERATURES MEANING THEY ARE IN KELVIN}
+These effecencies give the theoretical upper limit efficiencies, not 100\%.
+If $T_H$ is increased, the efficiency is increased, if $T_L$ is decreased, efficiency is decreased. such maximization could be achieved by maximizing heat input and heat disipation. 
+\subsection{Carnot refrigerator and Carnot Heat pump}
+for a \textbf{Carnot Refrigerator}
+\begin{equation}
+   \text{COP}_{\text{R,rev}} = \dfrac{1}{\frac{T_H}{T_L} - 1}
+\end{equation}
+for a \textbf{Carno heatpump}
+\begin{equation}
+   \text{COP}_{\text{HP,rev}} = \dfrac{1}{1 - \frac{T_L}{T_H}}
+\end{equation}
+\section{Entropy}
+For the special case of an internally \textbf{REVERSABLE} isothermal process:
+\begin{equation}
+   \Delta S = \frac{Q}{T_0}
+\end{equation}
+the increase of entropy principle which is:\begin{equation}
+   S_{\text{gen}} \geq 0
+\end{equation}
+for \textbf{pure substances} \begin{equation}
+   \Delta s = s_2 - s_1
+\end{equation}
+\begin{equation}
+   s_2 = s_1
+\end{equation}
+for \textbf{incompressable substances}
+\begin{equation}
+   s_2 - s_1 = c_{\text{avg}} \ln{\frac{T_2}{T_1}}
+\end{equation}
+for \textbf{incompressable substances and isentropic}\begin{equation}
+   T_2 = T_1
+\end{equation}
+for \textbf{IDEAL GASSES}
+\begin{equation}
+   s_2 - s_1 = c_{\upsilon , \text{avg}} \ln{\frac{T_2}{T_1}} + R\ln{\frac{\upsilon _2}{\upsilon _1}}
+\end{equation}
+for \textbf{Ideal gasses under isentropic process with constant specific heats}
+\begin{equation}
+   \left( \frac{T_2}{T_1} \right) = \left( \frac{\upsilon _1}{\upsilon _2} \right)^{k - 1} \qquad, k = \frac{c_p}{c_v}
+\end{equation}
+\begin{equation}
+   \left( \frac{T_2}{T_1} \right) = \left( \frac{P_1}{P_2} \right)^{k - 1/k}
+\end{equation}
+\begin{equation}
+   \left( \frac{P_2}{P_1} \right) = \left( \frac{\upsilon _1}{\upsilon _2} \right)^k
+\end{equation}
+for \textbf{incompressible substances} \begin{equation}
+   c_p = c_v = c
+\end{equation}
+\subsection{variable specific heat}
+look at page 389
+\subsection{steady flow work}
+\begin{equation}
+   w_rev = \upsilon \left( P_2 - P_1 \right) - \Delta ke - \Delta pe
+\end{equation}
+\subsection{more efficienies}
+\textbf{turbine efficiency}
+\begin{equation}
+   \frac{h_1 - h_{2a}}{h_1 - h_{2s}}
+\end{equation}
+\textbf{isentropic compressor}
+\begin{equation}
+   \frac{h_{2s} - h_1}{h_{2a} - h_1}
+\end{equation}
+\textbf{nozzle at exit}
+\begin{equation}
+   \frac{h_1 - h_{2a}}{h_1 - h_{2s}}
+\end{equation}
+for $h_{2s}$ knowing that $\Delta s = s_2 - s_1 = 0$ use the table to find the other enthalpy value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
